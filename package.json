@@ -4,7 +4,7 @@
     "start:app1": "cd app1 && yarn start",
     "start:navbar": "cd navbar && yarn start",
     "start": "serve -s -l 5000",
-    "install": "yarn install && cd app1 && yarn start"
+    "install": "yarn install && cd app1 && yarn install && cd navbar && yarn install"
 
   },
   "devDependencies": {
