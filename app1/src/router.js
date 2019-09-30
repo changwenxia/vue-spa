@@ -1,14 +1,18 @@
 import Router from 'vue-router'
-import Home from './views/Home.vue'
+import Menu from '@/views/menu.vue'
+import Manage from '@/views/manage.vue'
 
 export default new Router({
-  mode: 'history',
-  base: process.env.BASE_URL,
+  // mode: 'history',
+  // base: process.env.BASE_URL,
   routes: [
     {
-      path: '/app1',
-      name: 'home',
-      component: Home
+      path: '/',
+      component: Menu,
+    },
+    {
+      path: '/manage',
+      component: Manage,
     },
   ]
 })

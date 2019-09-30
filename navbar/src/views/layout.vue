@@ -9,7 +9,6 @@
         <el-container>
           <el-main>
             <router-view></router-view>
-            <div ref='routeId'></div>
           </el-main>
 
           <el-footer style="height: 80px"><foot-bar></foot-bar></el-footer>
@@ -20,9 +19,9 @@
 </template>
 
 <script>
-import HeaderBar from '@/views/header.vue';
-import MenuBar from '@/views//menu.vue';
-import FootBar from '@/views/footer.vue';
+import HeaderBar from './header.vue';
+import MenuBar from './menu.vue';
+import FootBar from './footer.vue';
 
 export default {
   name: 'layout',
@@ -30,11 +29,6 @@ export default {
     HeaderBar,
     MenuBar,
     FootBar,
-  },
-  mounted(){
-    const routeId = this.$refs.routeId,
-    id = 'single-spa-application:'+(this.$route.path.split('/')[1]);
-    routeId.setAttribute('id', id)
   },
 }
 </script>
