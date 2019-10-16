@@ -5,12 +5,9 @@
       :data="tableData"
       border
       style="width: 100%">
-      <el-table-column prop="name"  label="餐别名称">
-      </el-table-column>
-      <el-table-column prop="startTime"  label="就餐开始时间">
-      </el-table-column>
-      <el-table-column prop="endTime"  label="就餐结束时间">
-      </el-table-column>
+      <el-table-column prop="name"  label="餐别名称" />
+      <el-table-column prop="startTime" label="就餐开始时间" />
+      <el-table-column prop="endTime" label="就餐结束时间" />
       <el-table-column label="操作">
         <template slot-scope="scope">
           <el-button @click="dialogVisible = true" type="text" size="small">编辑</el-button>
@@ -33,7 +30,7 @@
 
 <script>
 export default {
-  name: 'Menu',
+  name: 'Manage',
   data() {
       return {
         dialogVisible: false,

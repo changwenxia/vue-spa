@@ -8,19 +8,22 @@
       <el-col :span="20" class="nav-list">
         <ul>
           <li>
-              <span class="el-dropdown-link"> <i class="xy-v2-slfl"></i>刷脸付激活码 </span>
+            <span class="el-dropdown-link"> 
+              <i class="xy-v2-slfl" />刷脸付激活码 
+            </span>
           </li>
-          <li style="cursor:default;line-height: 60px;">
+          <li class="download-li">
             <span class="header-text">下载禧云商家手机客户端，随时随地查看报表</span>
           </li>
           <li>
-              <span class="el-dropdown-link under-line"
-                ><i class="xy-v2-awm" style="font-size: 14px"></i><span>立即下载</span></span
-              >
+              <span class="el-dropdown-link under-line">
+                <i class="xy-v2-awm font14"  />
+                <span>立即下载</span>
+              </span>
           </li>
           <li>
               <span class="el-dropdown-link">
-                <i class="xy-v2-yh" style="font-size: 15px"></i>admin<i class="xy-v2-arrow"></i>
+                <i class="xy-v2-yh font14" />admin<i class="xy-v2-arrow" />
               </span>
           </li>
         </ul>
@@ -32,11 +35,6 @@
 
 export default {
   name: 'HeaderBar',
-  data() {
-    return {
-      
-    };
-  },
 };
 </script>
 <style lang="scss">
@@ -47,10 +45,6 @@ export default {
     }
   }
   .header-container {
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    letter-spacing: 0.02em;
-    background: red;
     a {
       text-decoration: none;
     }
@@ -83,8 +77,15 @@ export default {
             &:hover {
               background: #20a0ff;
             }
+            &.download-li{
+              cursor: default;
+              line-height: 60px;
+            }
             i {
               margin-right: 5px;
+              &.font14{
+                font-size: 14px;
+              }
             }
           }
         }

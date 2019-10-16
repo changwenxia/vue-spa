@@ -5,14 +5,12 @@
       :data="tableData"
       border
       style="width: 100%">
-      <el-table-column prop="name"  label="门店名称">
-      </el-table-column>
-      <el-table-column prop="org"  label="组织机构">
-      </el-table-column>
+      <el-table-column prop="name"  label="门店名称" />
+      <el-table-column prop="org"  label="组织机构" />
       <el-table-column label="操作">
         <template slot-scope="scope">
           <router-link to='/manage'>进入餐别管理</router-link>
-          <el-button @click="handleClick(scope.row)" type="text" size="small"></el-button>
+          <el-button @click="handleClick(scope.row)" type="text" size="small" />
         </template>
       </el-table-column>
     </el-table>

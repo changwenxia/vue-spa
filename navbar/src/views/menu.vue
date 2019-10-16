@@ -4,11 +4,10 @@
     text-color="#d0d1d1"
     :router="true"
     :unique-opened="true"
-    default-active="/app1"
+    default-active="index"
   >
-    <el-menu-item index='/index'>首页</el-menu-item>
-    <el-menu-item index='/app1'>子页面里的路由弹窗遮罩</el-menu-item>
-    <!-- <el-menu-item index='/book'>iframe嵌套</el-menu-item> -->
+    <el-menu-item index='index'>首页</el-menu-item>
+    <el-menu-item index='app1'>子页面里的路由弹窗遮罩</el-menu-item>
   </el-menu> 
 </template>
 
