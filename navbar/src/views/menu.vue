@@ -7,13 +7,22 @@
     default-active="index"
   >
     <el-menu-item index='index'>首页</el-menu-item>
-    <el-menu-item index='app1'>子页面里的路由弹窗遮罩</el-menu-item>
+    <el-menu-item index='app1' @click='click()'>
+      子页面里的路由弹窗遮罩</el-menu-item>
   </el-menu> 
 </template>
 
 <script>
 export default {
   name: 'MenuBar',
+  methods: {
+    click() {
+      // 向子应用传参数
+      window.postMessage({
+        token: 'aaaa',
+      });
+    },
+  },
 }
 </script>
 

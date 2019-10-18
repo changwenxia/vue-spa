@@ -4,6 +4,11 @@
   </span>
 </template>
 
+<script>
+export default {
+  name: 'MenuBar',
+}
+</script>
 <style>
 #app1 {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;

@@ -13,8 +13,8 @@ Vue.config.productionTip = false;
 const vueLifecycles = singleSpaVue({
   Vue,
   appOptions: {
-    render: (h) => h(App),
     router,
+    render: (h) => h(App),
   },
 });
 // 项目初始化启动的钩子

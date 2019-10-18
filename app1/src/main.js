@@ -15,6 +15,10 @@ const vueLifecycles = singleSpaVue({
     router,
   },
 });
+// 子应用接收参数
+window.addEventListener('message', function (res) {
+  console.log(res.data);
+})
 
 export const bootstrap = vueLifecycles.bootstrap;
 export const mount = vueLifecycles.mount;
