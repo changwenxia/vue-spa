@@ -1,5 +1,5 @@
 <template>
-   <div>
+  <div>
     <el-container class="container">
       <el-header height="80"> <header-bar /> </el-header>
       <el-container>
@@ -19,6 +19,7 @@
       </el-container>
     </el-container>
   </div>
+  
 </template>
 
 <script>
@@ -33,10 +34,20 @@ export default {
     MenuBar,
     FootBar,
   },
+  watch: {
+    $route(to,from) {
+      this.getApp()
+    }
+  },
   mounted(){
-    const routeId = this.$refs.routeId,
-    id = 'single-spa-application:'+(this.$route.path.split('/')[1]);
-    routeId.setAttribute('id', id)
+    this.getApp()
+  },
+  methods: {
+    getApp(){
+      const routeId = this.$refs.routeId,
+      id = 'single-spa-application:'+(this.$route.path.split('/')[1]);
+      routeId.setAttribute('id', id)
+    },
   },
 }
 </script>

@@ -3,14 +3,15 @@ import Menu from '@/views/menu.vue'
 import Manage from '@/views/manage.vue'
 
 export default new Router({
-  // mode: 'history',
+  mode: 'history',
+  base: process.env.BASE_URL,
   routes: [
     {
-      path: '/',
+      path: '/app1',
       component: Menu,
     },
     {
-      path: '/manage',
+      path: '/app1/manage',
       component: Manage,
     },
   ]

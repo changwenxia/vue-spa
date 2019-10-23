@@ -1,4 +1,4 @@
-import './set-public-path'
+import { setPublicPath } from 'systemjs-webpack-interop'
 import Vue from 'vue';
 import App from './App.vue';
 import router from './router';
@@ -6,7 +6,7 @@ import singleSpaVue from 'single-spa-vue';
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 Vue.use(ElementUI);
-
+setPublicPath('navbar')
 Vue.config.productionTip = false;
 
 // 创建一个vue的生命周期实例

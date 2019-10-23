@@ -9,7 +9,7 @@
       <el-table-column prop="org"  label="组织机构" />
       <el-table-column label="操作">
         <template slot-scope="scope">
-          <router-link to='/manage'>进入餐别管理</router-link>
+          <router-link to='/app1/manage'>进入餐别管理</router-link>
           <el-button @click="handleClick(scope.row)" type="text" size="small" />
         </template>
       </el-table-column>

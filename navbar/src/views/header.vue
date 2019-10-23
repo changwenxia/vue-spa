@@ -2,7 +2,7 @@
   <el-row class="header-container">
     <el-col :span="24" class="header">
       <el-col :span="4" class="title">
-        <img src="./logo.png" width="149" height="38" /> 
+        <img src="./images/logo.png" width="149" height="38" /> 
       </el-col>
 
       <el-col :span="20" class="nav-list">

@@ -1,4 +1,4 @@
-import './set-public-path'
+import { setPublicPath } from 'systemjs-webpack-interop'
 import Vue from 'vue';
 import App from './App.vue';
 import router from './router';
@@ -7,7 +7,7 @@ import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 Vue.use(ElementUI);
 Vue.config.productionTip = false;
-
+setPublicPath('app1')
 const vueLifecycles = singleSpaVue({
   Vue,
   appOptions: {
@@ -17,7 +17,7 @@ const vueLifecycles = singleSpaVue({
 });
 // 子应用接收参数
 window.addEventListener('message', function (res) {
-  console.log(res.data);
+  // console.log(res.data);
 })
 
 export const bootstrap = vueLifecycles.bootstrap;
