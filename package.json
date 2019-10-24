@@ -1,13 +1,13 @@
 {
   "name": "vue-spa",
   "scripts": {
-    "start:app1": "cd app1 && yarn start",
-    "start:navbar": "cd navbar && yarn start",
-    "start": "serve -s -l 5000",
+    "start": "concurrently 'cd app1 && yarn start' 'cd navbar && yarn start' 'serve -s -l 5000'",
     "install": "yarn install && cd app1 && yarn install && cd navbar && yarn install"
-
   },
   "devDependencies": {
     "serve": "^11.1.0"
+  },
+  "dependencies": {
+    "concurrently": "^5.0.0"
   }
 }

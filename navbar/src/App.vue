@@ -34,14 +34,10 @@ export default {
     MenuBar,
     FootBar,
   },
-  watch: {
-    $route(to,from) {
-      this.getApp()
-    }
-  },
   mounted(){
     this.getApp()
   },
+  
   methods: {
     getApp(){
       const routeId = this.$refs.routeId,
